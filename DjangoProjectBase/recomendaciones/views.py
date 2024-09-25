@@ -17,9 +17,6 @@ client = OpenAI(api_key=os.environ.get('api_key_3_3'),)
 with open('/Users/david/Taller3_PI1//movie_descriptions_embeddings.json', 'r') as file:
     file_content = file.read()
     movies = json.loads(file_content)
-
-#Esta función devuelve una representación numérica (embedding) de un texto, en este caso
-#la descripción de las películas
     
 def get_embedding(text, model="text-embedding-3-small"):
    text = text.replace("\n", " ")
